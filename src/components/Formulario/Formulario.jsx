@@ -35,33 +35,37 @@ const Formulario = ({ setAlertMessage }) => {
     <>
       <form onSubmit={validarInput}>
         <div className="form-group">
-          <div>
+          <div className="container mt-2">
             <input
+              type="text"
               className="form-control"
               name="Nombre"
               placeholder="Nombre"
               onChange={(e) => setNombre(e.target.value)}
             />
           </div>
-          <div>
+          <div className="container mt-2">
             <input
+              type="email"
               className="form-control"
               name="Email"
               placeholder="tuemail@ejemplo.com"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div>
+          <div className="container mt-2">
             <input
+              type="password"
               className="form-control"
               name="Password1"
               placeholder="Contraseña"
               onChange={(e) => setPassword1(e.target.value)}
             />
           </div>
-          <div>
+          <div className="container mt-2">
             <input
-              className="form-control"
+              type="password"
+              className="form-control "
               name="Password2"
               placeholder="Confirma tu contraseña"
               onChange={(e) => setPassword2(e.target.value)}
