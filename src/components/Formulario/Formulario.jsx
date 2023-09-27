@@ -14,10 +14,20 @@ const Formulario = ({ setAlertMessage, setColorMessage }) => {
     return regex.test(email);
   };
 
+  const validarNombre = (nombre) => {
+    const regexName = /^[A-Za-z\s-]+$/;
+    return regexName.test(nombre);
+  };
+
   const validarInput = (e) => {
     e.preventDefault();
     if (nombre === "" || email === "" || password1 === "" || password2 === "") {
       setAlertMessage("Ninguno de los campos puede estar vacio");
+      setColorMessage("true");
+    } else if (validarNombre(nombre) !== true) {
+      setAlertMessage(
+        "El nombre no es válido. Solo se permiten letras, espacios y guiones."
+      );
       setColorMessage("true");
     } else if (password1 !== password2) {
       setAlertMessage("Las contraseñas no coinciden");
@@ -27,7 +37,7 @@ const Formulario = ({ setAlertMessage, setColorMessage }) => {
       setColorMessage("true");
     } else {
       setAlertMessage("Datos enviados correctamente.");
-      setColorMessage("false")
+      setColorMessage("false");
       setNombre("");
       setEmail("");
       setPassword1("");
