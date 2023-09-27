@@ -45,6 +45,7 @@ const Formulario = ({ setAlertMessage, setColorMessage }) => {
               className="form-control"
               name="Nombre"
               placeholder="Nombre"
+              value={nombre}
               onChange={(e) => setNombre(e.target.value)}
             />
           </div>
@@ -54,6 +55,7 @@ const Formulario = ({ setAlertMessage, setColorMessage }) => {
               className="form-control"
               name="Email"
               placeholder="tuemail@ejemplo.com"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -63,6 +65,7 @@ const Formulario = ({ setAlertMessage, setColorMessage }) => {
               className="form-control"
               name="Password1"
               placeholder="Contraseña"
+              value={password1}
               onChange={(e) => setPassword1(e.target.value)}
             />
           </div>
@@ -72,6 +75,7 @@ const Formulario = ({ setAlertMessage, setColorMessage }) => {
               className="form-control "
               name="Password2"
               placeholder="Confirma tu contraseña"
+              value={password2}
               onChange={(e) => setPassword2(e.target.value)}
             />
           </div>
