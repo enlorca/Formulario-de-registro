@@ -1,10 +1,11 @@
 import React from "react";
 import "./Alert.css";
 
-const Alert = ( {message} ) => {
+const Alert = ( {message, bgColor} ) => {
   return (
     <div className="alert">
-      <p>{message}</p>
+        {console.log({bgColor})}
+        {bgColor === "true"? <p className="bg-danger text-light">{message}</p>: <p className="bg-success text-light">{message}</p>}
     </div>
   );
 };
